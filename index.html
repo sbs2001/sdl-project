@@ -1,19 +1,38 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
 
-    <!-- You can also require other files to run in this process -->
-    <script src="./renderer.js"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
+  <link rel="stylesheet" href="./node_modules/bulma/css/bulma.min.css" type="text/css">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <title>Encryptor Made with ❤️ By Shivam</title>
+</head>
+
+<body>
+
+  <div class="columns">
+    <div class="column is-half is-offset-one-quarter mr-3 card">
+      <section class="hero  has-background-info-light is-fullheight  column">
+        <div class="columns card-content">
+          <div class="hero column has-background-success-light is-fullheight m-3">
+            <div class="buttons columns is-vcentered">
+              <div class="title column card-header is-centered">
+                Menu
+              </div>
+              <span class="button column is-full is-primary" id="encrypt">Encrypt</span>
+              <span class="button column is-full is-danger" id="decrypt">Decrypt</span>
+              <span class="button column is-full is-info">About</span>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </div>
+
+  <script src="./renderer.js"></script>
+</body>
+
 </html>
