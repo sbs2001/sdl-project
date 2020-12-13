@@ -1,6 +1,9 @@
+// Authored by: Shivam Sandbhor 
+
 const electron = require('electron'); 
 var shell = require('shelljs');
 shell.config.execPath = shell.which('node').toString()
+
 function encrypt(file_path)
 {
     shell.exec('./encryptor-cli/encryptor encrypt ' + file_path)

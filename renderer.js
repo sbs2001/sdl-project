@@ -15,7 +15,6 @@ uploadFile.addEventListener('click', () => {
             filters: [ 
                 { 
                     name: 'Text Files', 
-                    extensions: ['txt', 'docx'] 
                 }, ], 
             properties: ['openFile'] 
         }).then(file => { 

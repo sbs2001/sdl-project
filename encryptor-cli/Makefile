@@ -9,3 +9,4 @@ build:
 
 clean: 
 	$(RM) encryptor
+	$(RM) sample.txt.enc sample.txt.enc.decrypted
