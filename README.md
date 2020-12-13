@@ -1,45 +1,59 @@
-# electron-quick-start
+# Installation:
 
-**Clone and run for a quick way to see Electron in action.**
+  
 
-This is a minimal Electron application based on the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start) within the Electron documentation.
+This is tested to work on Ubuntu 20.04 and should work on any other linux distros.
 
-**Use this app along with the [Electron API Demos](https://electronjs.org/#get-started) app for API code examples to help you get started.**
+## Set up nodejs and npm
+   
+**For Linux  and Mac OS:**
 
-A basic Electron application needs just these files:
+Install nodejs, npm , find their binaries for linux at https://nodejs.org/en/download/
 
-- `package.json` - Points to the app's main file and lists its details and dependencies.
-- `main.js` - Starts the app and creates a browser window to render HTML. This is the app's **main process**.
-- `index.html` - A web page to render. This is the app's **renderer process**.
+**For Windows:**
 
-You can learn more about each of these components within the [Quick Start Guide](https://electronjs.org/docs/tutorial/quick-start).
+Install WSL and set up nodejs, npm. Find instructions for this at https://docs.microsoft.com/en-us/windows/nodejs/setup-on-wsl2
 
-## To Use
 
-To clone and run this repository you'll need [Git](https://git-scm.com) and [Node.js](https://nodejs.org/en/download/) (which comes with [npm](http://npmjs.com)) installed on your computer. From your command line:
+Now further instructions are common to all platforms (assuming windows users use WSL): 
 
-```bash
-# Clone this repository
-git clone https://github.com/electron/electron-quick-start
-# Go into the repository
-cd electron-quick-start
-# Install dependencies
-npm install
-# Run the app
-npm start
+## Clone the repository : 
+
+To do this, enter the following in your terminal
+```
+git clone https://github.com/sbs2001/sdl-project.git
+cd sdl-project
 ```
 
-Note: If you're using Linux Bash for Windows, [see this guide](https://www.howtogeek.com/261575/how-to-run-graphical-linux-desktop-applications-from-windows-10s-bash-shell/) or use `node` from the command prompt.
+## Build the encryptor-cli binary: 
 
-## Resources for Learning Electron
+The project uses `encrytor-cli` which is written in C++. It needs to be compiled to be used. To do this do the following
 
-- [electronjs.org/docs](https://electronjs.org/docs) - all of Electron's documentation
-- [electronjs.org/community#boilerplates](https://electronjs.org/community#boilerplates) - sample starter apps created by the community
-- [electron/electron-quick-start](https://github.com/electron/electron-quick-start) - a very basic starter Electron app
-- [electron/simple-samples](https://github.com/electron/simple-samples) - small applications with ideas for taking them further
-- [electron/electron-api-demos](https://github.com/electron/electron-api-demos) - an Electron app that teaches you how to use Electron
-- [hokein/electron-sample-apps](https://github.com/hokein/electron-sample-apps) - small demo apps for the various Electron APIs
+```
+cd encryptor-cli
+make
+```
+Run the tests to ensure `encryptor-cli` is working properly using :
+```
+./tests.sh
+```
 
-## License
+Finally return to the project root using
+```
+cd .. 
+```
 
-[CC0 1.0 (Public Domain)](LICENSE.md)
+## Install node dependencies 
+
+Finally install the dependencies using
+```
+npm install 
+```
+
+## Run the project: 
+
+Finally we are here, let's start the damn thing using
+```
+npm start 
+```
+Enjoy !
